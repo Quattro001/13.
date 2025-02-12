@@ -1,0 +1,167 @@
+:root {
+    --primary-color: #6C5CE7; /* Измененный синий на фиолетовый */
+    --secondary-color: #4834D4; /* Более темный оттенок фиолетового */
+    --background-light: #f8f9fa;
+    --text-color: white;
+    --hover-color: #FF9F43; /* Оранжевый для акцентов */
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --card-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    --border-radius: 12px; /* Увеличенный радиус скругления */
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-light);
+    line-height: 1.6; /* Улучшение читаемости текста */
+}
+
+header {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    color: var(--text-color);
+    padding: 40px 0; /* Увеличенный отступ */
+    text-align: center;
+    box-shadow: var(--shadow);
+    animation: fadeIn 1s ease-in-out;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Центрирование меню */
+    gap: 30px; /* Расстояние между элементами меню */
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Вертикальное меню на мобильных */
+        gap: 15px;
+    }
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: var(--transition);
+    padding: 5px 10px; /* Отступы для ссылок */
+    border-radius: var(--border-radius);
+}
+
+a:hover {
+    color: var(--hover-color);
+    background-color: rgba(255, 255, 255, 0.1); /* Легкий фон при наведении */
+}
+
+main {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    margin: 20px 0;
+    transition: var(--transition);
+    background-color: white;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Поднимаем карточку при наведении */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px; /* Увеличенный отступ */
+    text-align: left;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 0;
+    background: #f1f1f1;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: var(--transition);
+}
+
+footer a:hover {
+    color: var(--hover-color);
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Анимация для кнопок или карточек */
+.animated {
+    animation: bounce 1.5s infinite;
+}
+
+/* Улучшение отступов для текста */
+p, h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 20px 0; /* Отступы между текстовыми элементами */
+}
+
+/* Улучшение отступов для контента */
+.container {
+    padding: 0 20px; /* Отступы по бокам */
+    max-width: 1200px;
+    margin: 0 auto;
+}

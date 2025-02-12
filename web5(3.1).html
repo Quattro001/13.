@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход для преподавателей</title>
+    <link rel="stylesheet" href="web5.css">
+</head>
+<body>
+    <header>
+        <h1>Вход преподавателя</h1>
+        <nav>
+            <a href="index.html" class="active">Главная</a>
+            <a href="web5(2).html">Регистрация</a>
+            <a href="web5(3).html">Вход преподавателя</a>
+            <a href="web5(4).html">Вход администратора</a>
+            <a href="web5(5).html">Контакты</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Личный кабинет</h2>
+        <div class="dashboard">
+            <div class="search-section">
+                <input type="text" id="searchInput" placeholder="Поиск...">
+                <button onclick="searchData()">Найти</button>
+            </div>
+            
+            <div class="upload-section">
+                <input type="file" id="fileUpload">
+                <button onclick="uploadFile()">Загрузить</button>
+            </div>
+            
+            <div id="results"></div>
+        </div>
+    </div>
+
+    <script src="web5.js"></script>
+</body>
+</html>
